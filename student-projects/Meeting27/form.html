@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Order</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+</head>
+<body>
+    <main class="stack">
+        <h1>🍽️ Add New Order</h1>
+        <form class="stack" name="new order">
+            <div class="form-input">
+                <label for="nameInput">🧑‍💼 Customer Name:</label>
+                <input id="nameInput" name="name" type="text" required autofocus>
+            </div>
+            <div class="form-input">
+                <label for="itemsInput">🍔 Items:</label>
+                <input id="itemsInput" name="items" type="text" required>
+            </div>
+            <div class="form-input">
+                <label for="statusDropdown">Status:</label>
+                <select name="status" id="statusDropdown">
+                    <option value="pending">🟡 Pending</option>
+                    <option value="in-progress">🟠 In Progress</option>
+                    <option value="completed">✅ Completed</option>
+                </select>
+            </div>
+            <div class="cluster">
+                <button>➕ Add Order</button>
+                <button type="reset">🔄 Reset</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
