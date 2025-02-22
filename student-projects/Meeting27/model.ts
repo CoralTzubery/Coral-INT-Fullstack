@@ -1,4 +1,4 @@
-type Order = {
+export type Order = {
     id: number,
     customerName: string,
     items: string[],
@@ -8,7 +8,8 @@ type Order = {
 let orders: Order[] = [];
 
 export function getOrders(): Order[] {
-    return orders;
+    const data = localStorage.getItem("orders");
+    return data ? JSON.parse(data) : [];
 }
 
 export function addOrder(customerName: string, items: string[], status: string): void {
@@ -29,7 +30,7 @@ export function deleteOrder(id: number): void {
 }
 
 export function updateOrder(id: number, status: string): void {
-    const order = order.find(order => order.id === id);
+    const order = orders.find(order => order.id === id);
     
     if(order) {
         order.status = status;

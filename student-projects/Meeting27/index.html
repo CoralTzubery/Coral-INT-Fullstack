@@ -9,7 +9,7 @@
 <body>
     <header class="stack">
         <h1>🍽️ Restaurant Order Management System</h1>
-        <button><a href="form.html"></a>➕ Add Order</button>
+        <button onclick="location.href='form.html'">➕ Add Order</button>
     </header>
 
     <main class="stack">
@@ -52,8 +52,11 @@
             </ul>
         </section>
     </main>
+    
     <script type="module">
-        
+        import { initializeOrderPage } from "./controller.js";
+
+        document.addEventListener("DOMContentLoaded", initializeOrderPage);
     </script>
 </body>
 </html>

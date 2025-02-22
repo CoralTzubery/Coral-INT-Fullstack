@@ -1,6 +1,7 @@
 let orders = [];
 export function getOrders() {
-    return orders;
+    const data = localStorage.getItem("orders");
+    return data ? JSON.parse(data) : [];
 }
 export function addOrder(customerName, items, status) {
     const newOrder = {
@@ -17,7 +18,7 @@ export function deleteOrder(id) {
     saveOrders();
 }
 export function updateOrder(id, status) {
-    const order = order.find(order => order.id === id);
+    const order = orders.find(order => order.id === id);
     if (order) {
         order.status = status;
         saveOrders();

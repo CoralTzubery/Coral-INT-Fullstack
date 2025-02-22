@@ -29,8 +29,15 @@
             <div class="cluster">
                 <button>➕ Add Order</button>
                 <button type="reset">🔄 Reset</button>
+                <button type="button" onclick="window.location.href='index.html'">⬅️ Back</button>
             </div>
         </form>
     </main>
+
+    <script type="module">
+        import { initializeOrderForm } from "./controller.js";
+
+        document.addEventListener("DOMContentLoaded", initializeOrderForm);
+    </script>
 </body>
 </html>
