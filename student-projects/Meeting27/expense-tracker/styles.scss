@@ -1,0 +1,103 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    font-size: calc(1rem + 0.5vw);
+    line-height: 1.5;
+    height: 100%;
+}
+
+body {
+    font-family: system-ui;
+    display:flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+main {
+    width: min(70ch, 100% - 2rem);
+    margin-inline: auto;
+    flex: 9999999;
+    min-width: 900px;
+    overflow: auto;
+
+    > * + * {
+        margin-block-start: 2rem;
+    }
+}
+
+input, button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+.site-nav {
+    background: hsl(0deg 0% 95%);
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 250px;
+
+    menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        flex: 1;
+    }
+
+    &__break {
+        margin-block-start: auto;
+    }
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form[name="add todo"] {
+    display: flex;
+    gap: 0.5rem;
+
+    > input {
+        flex: 1;
+    }
+}
+
+#todos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    > li{
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+
+        &.completed {
+            color: #5f5f5f;
+
+            &::after {
+                content: "✅";
+            }
+        }
+    }
+}
