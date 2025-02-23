@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Expense</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+</head>
+<body>
+    <header>
+        <nav class="site-nav">
+            <p class="brand">Tracker</p>
+            <menu>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Transactions</a></li>
+                <li><a href="#">Settings</a></li>
+            </menu>
+        </nav>
+    </header>
+
+    <main class="stack">
+        <h1>Add New Expense</h1>
+        <form class="stack" name="add expense">
+            <div class="form-input">
+                <label for="titleInput">Title</label>
+                <input type="text" name="titleInput" id="title" required autofocus>
+            </div>
+            <div class="form-input">
+                <label for="dateInput">Date</label>
+                <input type="date" name="dateInput" id="date" required>
+            </div>
+            <div class="form-input">
+                <label for="amountInput">Amount</label>
+                <input type="number" min="0" max="1000000" name="amountInput" id="amount" required>
+            </div>
+            <div class="form-input">
+                <label for="categoryDropdown">Category</label>
+                <select name="categoryDropdown" id="category">
+                    <option value="food">🍕 Food</option>
+                    <option value="education">📖 Education</option>
+                    <option value="housing">🏠 Housing</option>
+                    <option value="car">🚗 Car</option>
+                    <option value="shopping">🛍️ Shopping</option>
+                    <option value="pets">🐶 Pets</option>
+                </select>
+            </div>
+            <div class="cluster">
+                <button>Create</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
