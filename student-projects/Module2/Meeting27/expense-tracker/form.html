@@ -51,5 +51,22 @@
             </div>
         </form>
     </main>
+
+    <script type="module">
+        import { addExpense } from "./dist/model.js";
+
+        document.forms.namedItem("add expense").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const rawExpense = Object.fromEntries(formData);
+
+            addExpense({
+                ...rawExpense,
+                assignee: Number(rawTask.assignee),
+                isImportant: !!rawTask.isImportant,
+            });
+        });
+    </script>
 </body>
 </html>

@@ -33,7 +33,8 @@ body {
 .lineup {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    height: 100rem;
     gap: 1rem;
     place-content: center;
 
